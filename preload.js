@@ -306,34 +306,33 @@ let fish = [
                                         "hours":        tools.setHourRange(0, 23),
                                         "availability": tools.setMonthRange(month.September, month.March)    | location.mouth          }] ];
 
-// TODO: WARNING: End times may be exclusive!!!
 let bugs = [ [ "common butterfly",           { "price":        160,
-                                               "hours":        tools.setHourRange(9, 18),
+                                               "hours":        tools.setHourRange(9, 17),
                                                "availability": tools.setMonthRange(month.September, month.January)   | location.airbound                }],
              
              [ "yellow butterfly",           { "price":        160,
-                                               "hours":        tools.setHourRange(4, 18),
+                                               "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.March, month.June)          | location.airbound
                                                                tools.setMonthRange(month.September, month.October)   | 0                                }],
              
              [ "tiger butterfly",            { "price":        240,
-                                               "hours":        tools.setHourRange(4, 18),
+                                               "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.March, month.September)     | location.airbound                }],
              
              [ "peacock butterfly",          { "price":        2500,
-                                               "hours":        tools.setHourRange(4, 18),
+                                               "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.March, month.June)          | location.airbound                }],
              
              [ "common bluebottle",          { "price":        300,
-                                               "hours":        tools.setHourRange(4, 18),
+                                               "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.April, month.August)        | location.airbound                }],
              
              [ "paper kite butterfly",       { "price":        1000,
-                                               "hours":        tools.setHourRange(8, 18),
+                                               "hours":        tools.setHourRange(8, 17),
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.airbound                }],
              
              [ "great purple emperor",       { "price":        3000,
-                                               "hours":        tools.setHourRange(4, 18),
+                                               "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.May, month.August)          | location.airbound                }],
              
              [ "emperor butterfly",          { "price":        4000,
@@ -342,44 +341,44 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                                tools.setMonthRange(month.June, month.September)      | 0                                }],
              
              [ "agrias butterfly",           { "price":        3000,
-                                               "hours":        tools.setHourRange(8, 16),
+                                               "hours":        tools.setHourRange(8, 15),
                                                "availability": tools.setMonthRange(month.April, month.September)     | location.airbound                }],
              
              [ "Rajah Brooke's birdwing",    { "price":        2500,
-                                               "hours":        tools.setHourRange(8, 16),
+                                               "hours":        tools.setHourRange(8, 15),
                                                "availability": tools.setMonthRange(month.December, month.February)   | location.airbound
                                                                tools.setMonthRange(month.April, month.September)     | 0                                }],
              
              [ "Queen Alexandra's birdwing", { "price":        4000,
-                                               "hours":        tools.setHourRange(8, 16),
+                                               "hours":        tools.setHourRange(8, 15),
                                                "availability": tools.setMonthRange(month.May, month.September)       | location.airbound                }],
              
              [ "moth",                       { "price":        130,
-                                               "hours":        tools.setHourRange(19, 4),
+                                               "hours":        tools.setHourRange(19, 3),
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.airbound                }],
              
              [ "Atlas moth",                 { "price":        3000,
-                                               "hours":        tools.setHourRange(19, 4),
+                                               "hours":        tools.setHourRange(19, 3),
                                                "availability": tools.setMonthRange(month.April, month.September)     | location.airbound                }],
              
              [ "Madagascan sunset moth",     { "price":        2500,
-                                               "hours":        tools.setHourRange(8, 16),
+                                               "hours":        tools.setHourRange(8, 15),
                                                "availability": tools.setMonthRange(month.April, month.September)     | location.airbound                }],
              
              [ "long locust",                { "price":        200,
-                                               "hours":        tools.setHourRange(8, 19),
+                                               "hours":        tools.setHourRange(8, 18),
                                                "availability": tools.setMonthRange(month.April, month.November)      | location.earthbound              }],
              
              [ "mantis",                     { "price":        430,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.March, month.November)      | location.flowerbound             }],
              
              [ "orchid mantis",              { "price":        2400,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.March, month.November)      | location.flowerbound             }],
              
              [ "honeybee",                   { "price":        200,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.March, month.July)          | location.flowerbound             }], //Techincally flower, can fly
              
              [ "wasp",                       { "price":        2500,
@@ -387,11 +386,11 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.woodbound               }],
              
              [ "darner dragonfly",           { "price":        230,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.April, month.October)       | location.airbound                }],
              
              [ "banded dragonfly",           { "price":        4500,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.May, month.October)         | location.airbound                }],
              
              [ "mole cricket",               { "price":        500,
@@ -399,15 +398,15 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.November, month.May)        | location.earthbound              }],
              
              [ "pondskater",                 { "price":        130,
-                                               "hours":        tools.setHourRange(8, 19),
+                                               "hours":        tools.setHourRange(8, 18),
                                                "availability": tools.setMonthRange(month.May, month.September)       | location.waterbound              }], //Also in rivers
              
              [ "diving beetle",              { "price":        800,
-                                               "hours":        tools.setHourRange(8, 19),
+                                               "hours":        tools.setHourRange(8, 18),
                                                "availability": tools.setMonthRange(month.May, month.September)       | location.waterbound              }],
              
              [ "giant waterbug",             { "price":        2000,
-                                               "hours":        tools.setHourRange(19, 8),
+                                               "hours":        tools.setHourRange(19, 7),
                                                "availability": tools.setMonthRange(month.April, month.September)     | location.waterbound              }],
              
              [ "stinkbug",                   { "price":        120,
@@ -415,11 +414,11 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.March, month.October)       | location.flowerbound             }],
              
              [ "man-faced stinkbug",         { "price":        1000,
-                                               "hours":        tools.setHourRange(19, 8),
+                                               "hours":        tools.setHourRange(19, 7),
                                                "availability": tools.setMonthRange(month.March, month.October)       | location.flowerbound             }],
              
              [ "ladybug",                    { "price":        200,
-                                               "hours":        tools.setHourRange(8, 17),
+                                               "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.March, month.June)          | location.flowerbound
                                                                month.October                                         | 0                                }],
              
@@ -449,7 +448,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.woodbound               }],
              
              [ "spider",                     { "price":        600,
-                                               "hours":        tools.setHourRange(19, 8),
+                                               "hours":        tools.setHourRange(19, 7),
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.woodbound               }],
              
              [ "ant",                        { "price":        80,
@@ -457,7 +456,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.earthbound              }], //turnip
              
              [ "hermit crab",                { "price":        1000,
-                                               "hours":        tools.setHourRange(19, 8),
+                                               "hours":        tools.setHourRange(19, 7),
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.beachbound              }],
              
              [ "wharf roach",                { "price":        200,
@@ -477,19 +476,19 @@ let bugs = [ [ "common butterfly",           { "price":        160,
                                                "availability": tools.setMonthRange(month.January, month.December)    | location.boulderbound | rainyDay }], //Also on shrubberies, sits on top instead of inside
              
              [ "pill bug",                   { "price":        250,
-                                               "hours":        tools.setHourRange(22, 16),
+                                               "hours":        tools.setHourRange(22, 15),
                                                "availability": tools.setMonthRange(month.September, month.June)      | location.boulderbound            }],
              
              [ "centipede",                  { "price":        300,
-                                               "hours":        tools.setHourRange(16, 22),
+                                               "hours":        tools.setHourRange(16, 21),
                                                "availability": tools.setMonthRange(month.September, month.June)      | location.boulderbound            }],
              
              [ "tarantula",                  { "price":        8000,
-                                               "hours":        tools.setHourRange(19, 4),
+                                               "hours":        tools.setHourRange(19, 3),
                                                "availability": tools.setMonthRange(month.November, month.April)      | location.earthbound              }],
              
              [ "scorpion",                   { "price":        8000,
-                                               "hours":        tools.setHourRange(19, 4),
+                                               "hours":        tools.setHourRange(19, 3),
                                                "availability": tools.setMonthRange(month.May, month.October)         | location.earthbound              }] ];
 
 
