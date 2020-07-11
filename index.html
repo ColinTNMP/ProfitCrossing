@@ -4,18 +4,20 @@
     <meta charset='utf-8'/>
     <meta name='viewport' value='width=device_width,initial-scale=1.0'/>
     <title> AC:NH Selling Guide </title>
-    <script type='text/javascript' src='preload/preload.js'></script>
+    <script type='text/javascript' src='preload.js'></script>
     <script type='text/javascript' id='test'>
-        const preloadedData = preload();
+        function doTest() {
+            let data = preload();
+            let json = JSON.stringify(data);
+            
+            let outp = document.createElement("p");
+            let text = document.createTextNode(json);
+            outp.appendChild(text);
+            document.body.appendChild(outp);
+            alert("Done!");
+        }
     </script>
   </head>
-  <body>
-    <h1> ProfitCrossing </h1>
-    <hr/>
-    <div>
-      <p> This is reserved for search controls </p>
-    </div>
-    <div id='table'>
-    </div>
+  <body onload="doTest();">
   </body>
 </html>

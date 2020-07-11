@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang='en-US'>
+    <head>
+        <meta charset='utf-8'/>
+        <meta name='viewport' value='width=device_width,initial-scale=1.0'/>
+        <title>JSON Sorter</title>
+        <!-- Files for sorting and UI controls. Stored with this file @/data/sort/ -->
+        <script type='text/javascript' src='sort.js'></script>
+        <script type='text/javascript' src='price.js'></script>
+        <style type='text/css'>
+            .error {
+                position:     absolute;
+                width:            100%;
+                height:           100%;
+                z-index:            -1;
+                background-color: #fff;
+                
+            }
+        </style>
+    </head>
+    <body onload='init();'>
+        
+        <!-- If JavaScript is disabled, remind dev to enable it. -->
+        <noscript>
+            <div class='error'>
+                <h1> JavaScript is disabled. </h1>
+                <p>
+                    Please try the following:
+                    <ul>
+                        <li> Make sure no plugins are blocking scripts                        </li>
+                        <li> Make sure site settings allow scripts                            </li>
+                        <li> Make sure JavaScript is enabled in browser settings              </li>
+                        <li> Make sure scripting is enabled in <code>about:config</code>      </li>
+                        <li> Restart the browser                                              </li>
+                        <li> Try a different browser                                          </li>
+                        <li> Restart the computer                                             </li>
+                        <li> Request a pull from GitHub and update your copy of this document </li>
+                        <li> Restart your computer                                            </li>
+                        <li> Destroy your monitor                                             </li>
+                    </ul>
+                </p>
+            </div>
+        </noscript>
+        
+        <!-- TODO: Add error message if this page is encountered on protocols other than file:// -->
+        
+        <h1> ProfitCrossing JSON Sorter </h1>
+        <p> Upload <code>main.json</code>, select desired output files, then press <code>generate</code>. </p>
+        <form id='selections'>
+            <!-- Input for 'main.json' -->
+            <label to='mainJSON'> <code>main.json</code> </label>
+                <input type='file' id='mainJSON'/>
+            
+            <hr/>
+            
+            <!-- Input for which files to generate -->
+            <label to='selectAll'> Select All: </label>
+                <input type='checkbox' id='SelectAll' onclick='toggleSelection();'/>
+            <label to='sortPrice'> <code>price.json</code> </label>
+                <input type='checkbox' id='sortPrice'/>
+            
+            <input type='send' onclick='engage();'/>
+        </form>
+    </body>
+</html>

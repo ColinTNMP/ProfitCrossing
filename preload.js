@@ -76,24 +76,36 @@ const hr = [
 
 let tools = {
     "setHourRange": function(start, end) {
+        console.log("setHourRange("+start+","+end+"):");
+        if (start > end) {
+            console.log("> Beginning debug output...");
+        } else {
+            console.log("> Skipping...");
+        }
+        let t = (start > end)? 1 : 0;
         let flags = 0;
         let i = start;
         while (true) {
+            if (t) console.log("> flags += Math.pow(2, "+i+");");
             flags += Math.pow(2, i);
+            if (t) console.log("> if ("+i+" == "+end+") {...}");
+            if (i == end) {  if (t) {console.log(">> return flags;");} return flags; }
+            if (t) console.log("> if ("+i+" == 23) {...}");
+            if (i == 23) { if (t) {console.log(">> i = -1;");} i = -1; }
+            if (t) console.log("> "+i+"++");
             i++;
-            if (i == 24) i = 0;
-            if (i > end) return flags;
         }
     },
     
     "setMonthRange": function(start, end) {
+        //alert("setMonthRange("+start+","+end+"):");
         let flags = 0;
         let i = start;
         while (true) {
             flags += Math.pow(2, i);
-            i++;
-            if (i == 12) i = 0;
-            if (i > end) return flags;
+            if (i == end) return flags;
+            if (i == 11)  i = -1;
+            i++
         }
     }
 };
@@ -105,7 +117,7 @@ let fish = [
                
                [ "pale chub",         { "price":        200,
                                         "hours":        tools.setHourRange(9, 15),
-                                        "availability": tools.setMonthRange(month.January, month.Decmeber)   | location.river          }],
+                                        "availability": tools.setMonthRange(month.January, month.December)   | location.river          }],
                
                [ "crucian carp",      { "price":        160,
                                         "hours":        tools.setHourRange(0, 23),
@@ -182,12 +194,12 @@ let fish = [
                [ "cherry salmon",     { "price":        1000,
                                         "hours":        tools.setHourRange(16, 9),
                                         "availability": tools.setMonthRange(month.March, month.June)         | location.clifftop
-                                                        tools.setMonthRange(month.September, month.November) | 0                       }],
+                                                      | tools.setMonthRange(month.September, month.November) | 0                       }],
                
                [ "golden trout",      { "price":        15000,
                                         "hours":        tools.setHourRange(16, 9),
                                         "availability": tools.setMonthRange(month.March, month.May)          | location.clifftop
-                                                        tools.setMonthRange(month.September, month.November) | 0                       }],
+                                                      | tools.setMonthRange(month.September, month.November) | 0                       }],
                
                [ "stringfish",        { "price":        15000,
                                         "hours":        tools.setHourRange(16, 9),
@@ -239,7 +251,7 @@ let fish = [
                
                [ "zebra turkeyfish",  { "price":        500,
                                         "hours":        tools.setHourRange(0, 23),
-                                        "availability": tools.setMonthRange(month.April, month.September])   | location.sea            }],
+                                        "availability": tools.setMonthRange(month.April, month.September)   | location.sea            }],
                
                [ "anchovy",           { "price":        200,
                                         "hours":        tools.setHourRange(4, 20),
@@ -280,7 +292,7 @@ let fish = [
                [ "blue marlin",       { "price":        10000,
                                         "hours":        tools.setHourRange(0, 23),
                                         "availability": tools.setMonthRange(month.November, month.April)     | location.dock
-                                                        tools.setMonthRange(month.July, month.September)     | 0                       }],
+                                                      | tools.setMonthRange(month.July, month.September)     | 0                       }],
                
                [ "mahi-mahi",         { "price":        6000,
                                         "hours":        tools.setHourRange(0, 23),
@@ -313,7 +325,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
              [ "yellow butterfly",           { "price":        160,
                                                "hours":        tools.setHourRange(4, 17),
                                                "availability": tools.setMonthRange(month.March, month.June)          | location.airbound
-                                                               tools.setMonthRange(month.September, month.October)   | 0                                }],
+                                                             | tools.setMonthRange(month.September, month.October)   | 0                                }],
              
              [ "tiger butterfly",            { "price":        240,
                                                "hours":        tools.setHourRange(4, 17),
@@ -338,7 +350,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
              [ "emperor butterfly",          { "price":        4000,
                                                "hours":        tools.setHourRange(0, 0),
                                                "availability": tools.setMonthRange(month.December, month.March)      | location.airbound
-                                                               tools.setMonthRange(month.June, month.September)      | 0                                }],
+                                                             | tools.setMonthRange(month.June, month.September)      | 0                                }],
              
              [ "agrias butterfly",           { "price":        3000,
                                                "hours":        tools.setHourRange(8, 15),
@@ -347,7 +359,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
              [ "Rajah Brooke's birdwing",    { "price":        2500,
                                                "hours":        tools.setHourRange(8, 15),
                                                "availability": tools.setMonthRange(month.December, month.February)   | location.airbound
-                                                               tools.setMonthRange(month.April, month.September)     | 0                                }],
+                                                             | tools.setMonthRange(month.April, month.September)     | 0                                }],
              
              [ "Queen Alexandra's birdwing", { "price":        4000,
                                                "hours":        tools.setHourRange(8, 15),
@@ -420,7 +432,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
              [ "ladybug",                    { "price":        200,
                                                "hours":        tools.setHourRange(8, 16),
                                                "availability": tools.setMonthRange(month.March, month.June)          | location.flowerbound
-                                                               month.October                                         | 0                                }],
+                                                             | month.October                                         | 0                                }],
              
              [ "tiger beetle",               { "price":        1500,
                                                "hours":        tools.setHourRange(0, 23),
@@ -433,7 +445,7 @@ let bugs = [ [ "common butterfly",           { "price":        160,
              [ "violin beetle",              { "price":        450,
                                                "hours":        tools.setHourRange(0, 23),
                                                "availability": tools.setMonthRange(month.May, month.June)            | location.woodbound
-                                                               tools.setMonthRange(month.September, month.November)  | 0                                }],
+                                                             | tools.setMonthRange(month.September, month.November)  | 0                                }],
              
              [ "citrus long-horned beetle",  { "price":        350,
                                                "hours":        tools.setHourRange(0, 23),
@@ -493,9 +505,11 @@ let bugs = [ [ "common butterfly",           { "price":        160,
 
 
 let data = {
-    "fish": new Map(fish),
-    "bugs": new Map(bugs)
+    "fish": fish,
+    "bugs": /*new Map(*/bugs//)
 };
+
+console.log("-- ALL DONE --");
 
 return data;
 
