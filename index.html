@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang='en-US'>
-  <head>
-    <meta charset='utf-8'/>
-    <meta name='viewport' value='width=device_width,initial-scale=1.0'/>
-    <title> AC:NH Selling Guide </title>
-    <script type='text/javascript' src='preload.js'></script>
-    <script type='text/javascript' id='test'>
-        function doTest() {
-            let data = preload();
-            let json = JSON.stringify(data);
-            
-            let outp = document.createElement("p");
-            let text = document.createTextNode(json);
-            outp.appendChild(text);
-            document.body.appendChild(outp);
-            alert("Done!");
-        }
-    </script>
-  </head>
-  <body onload="doTest();">
-  </body>
+	<head>
+		<meta charset='utf-8'/>
+		<meta name='viewport' value='width=device_width,initial-scale=1.0'/>
+		
+		<title> Profit Crossing </title>
+		
+		<link rel='stylesheet' type='text/css' href='styles.css'/>
+	</head>
+	<body>
+		<h1> Profit Crossing </h1>
+		<h2> Your guide to collectables and their worth </h4>
+		<br/>
+		<h4> Viewing: <span id='viewName'> Bugs </span> </h4>
+		<table id='table'>
+			<tr id='header'>
+				<th> Name     </th>
+				<th> Value    </th>
+				<th> Months   </th>
+				<th> Hours    </th>
+				<th> Location </th>
+			</tr>
+			<div id='tableContent'>
+				<td> Test </td>
+				<td> 1,400 </td>
+				<td> 
+			</div>
+		</table>
+	</body>
 </html>
