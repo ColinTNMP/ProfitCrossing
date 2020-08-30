@@ -1,0 +1,12 @@
+body {
+	font-family: cambria;
+}
+
+#header > th {
+	font-weight: bold;
+	font-size:   150%;
+}
+
+th, td {
+	border: 2px solid black;
+}
